@@ -14,7 +14,7 @@
   },
   "scripts": {
     "android:bundle": "tsc && node node_modules/react-native/local-cli/cli.js bundle --entry-file=src/js/index.android.js --platform=android --assets-dest=android/src/main/res --bundle-output=android/src/main/assets/bundle.js --minify",
-    "android:release": "npm run android:bundle && ./gradlew aR",
+    "android:release": "npm run android:bundle && ./gradlew android:aR",
     "dev-server": "concurrently \"node node_modules/react-native/local-cli/cli.js start --projectRoots=src/js,node_modules\" \"tsc --watch\"",
     "postinstall": "typings install"
   },

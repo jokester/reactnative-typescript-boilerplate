@@ -24,12 +24,22 @@ android {
         versionName "0.1"
     }
 
+    signingConfigs {
+        debugkey {
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+
     buildTypes {
         release {
             // FIXME should enable lint/proguard
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debugkey
         }
     }
 }
