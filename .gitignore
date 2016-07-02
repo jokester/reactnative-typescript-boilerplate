@@ -1,4 +1,5 @@
 *.iml
+/src/js/
 /local.properties
 /.idea/
 /.gradle/

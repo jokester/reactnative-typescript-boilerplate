@@ -13,7 +13,7 @@
   },
   "scripts": {
     "android:bundle": "node node_modules/react-native/local-cli/cli.js bundle --entry-file=js/index.android.js --platform=android --assets-dest=android/src/main/res --bundle-output=android/src/main/assets/bundle.js --minify",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "node node_modules/react-native/local-cli/cli.js start",
     "postinstall": "typings install"
   },
   "repository": {

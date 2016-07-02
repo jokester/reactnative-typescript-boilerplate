@@ -1,24 +1,26 @@
-'use strict';
-// vim: ft=jsx
-
-import React from 'react';
+// vim: ft=typescript
+// import * as React from "react-native";
 import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 
-class MyAwesomeApp extends React.Component {
+class MyAwesomeApp extends React.Component<{}, {}> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.hello}>Hello, World</Text>
+        <Text style={styles.hello}>Hello, Woold</Text>
       </View>
     )
   }
 }
-var styles = StyleSheet.create({
+interface AppStyle {
+    container: React.ViewStyle;
+    hello: React.TextStyle;
+}
+var styles = StyleSheet.create<AppStyle>({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -31,3 +33,4 @@ var styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('MyAwesomeApp', () => MyAwesomeApp);
+
