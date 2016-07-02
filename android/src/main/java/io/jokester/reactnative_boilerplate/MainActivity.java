@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
 
         mReactRootView = new ReactRootView(this);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         {
             ReactInstanceManager.Builder builder =
                     ReactInstanceManager.builder()
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
 
             if (BuildConfig.DEBUG) {
                 // Debug build: load js from dev server
-                builder.setJSMainModuleName("js/index.android");
+                builder.setJSMainModuleName("index.android");
             } else {
                 // Production build: load js from assets
                 builder.setBundleAssetName("bundle.js");
