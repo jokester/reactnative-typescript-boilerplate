@@ -4,6 +4,7 @@
 
 - Import `android/` in Android Studio and you are ready to go
 - SDK 24
+- `npm run android:release` to build signed apk with offline uglified js.
 
 ## React Native
 
