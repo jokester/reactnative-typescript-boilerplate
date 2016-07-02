@@ -1,0 +1,34 @@
+{
+  "name": "reactnative-typescript-boilerplate",
+  "version": "0.1.0",
+  "description": "A boilerplate for TypeScript / ReactNative app",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^15.2.0",
+    "react-native": "^0.28.0"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10",
+    "typings": "^1.3.1"
+  },
+  "scripts": {
+    "android:bundle": "node node_modules/react-native/local-cli/cli.js bundle --entry-file=js/index.android.js --platform=android --assets-dest=android/src/main/res --bundle-output=android/src/main/assets/bundle.js --minify",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "typings install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jokester/reactnative-typescript-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "reacnative",
+    "typescript"
+  ],
+  "author": "Wang Guan <momocraft.com>",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/jokester/reactnative-typescript-boilerplate/issues"
+  },
+  "homepage": "https://github.com/jokester/reactnative-typescript-boilerplate#readme"
+}
