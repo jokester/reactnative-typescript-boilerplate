@@ -7,10 +7,12 @@
 
 ## Android
 
-- Import `android/` in Android Studio and you are ready to go
-- SDK 24
-- `npm run dev-server` to start `tsc --watch` and package server.
-- `npm run android:release` to build signed apk with offline uglified js.
+- Android SDK 24 is required
+- `npm run dev-server` to start dev server and watch `src/ts/*.ts` files
+- `npm run android:build` to create debug apk (`android/build/outputs/apk/android-debug.apk`)
+    - [adb reverse](https://facebook.github.io/react-native/docs/running-on-device-android.html#using-adb-reverse) may be required
+    - You can also import `android/` into Android Studio and run with it
+- `npm run android:release` to build signed apk `android/build/outputs/apk/android-release.apk` with offline minimized js bundle.
 
 ## iOS(TODO)
 

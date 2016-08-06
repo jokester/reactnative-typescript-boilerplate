@@ -13,7 +13,8 @@
     "typings": "^1.3.2"
   },
   "scripts": {
-    "android:bundle": "tsc && node node_modules/react-native/local-cli/cli.js bundle --entry-file=src/js/index.android.js --minify --platform=android --assets-dest=android/src/main/res --bundle-output=android/bundle.js && uglifyjs --screw-ie8 --mangle <android/bundle.js >android/src/main/assets/bundle.js && rm android/bundle.js",
+    "android:bundle": "tsc && node node_modules/react-native/local-cli/cli.js bundle --entry-file=src/js/index.android.js --platform=android --assets-dest=android/src/main/res --bundle-output=android/bundle.js && uglifyjs --screw-ie8 --mangle <android/bundle.js >android/src/main/assets/bundle.js && rm android/bundle.js",
+    "android:debug": "rm -f android/src/main/assets/bundle.js && ./gradlew android:assembleDebug",
     "android:release": "npm run android:bundle && ./gradlew android:aR",
     "dev-server": "concurrently \"node node_modules/react-native/local-cli/cli.js start --projectRoots=src/js,node_modules\" \"tsc --watch\"",
     "postinstall": "typings install"
