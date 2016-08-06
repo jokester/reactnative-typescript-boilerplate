@@ -2,7 +2,7 @@
   "name": "reactnative-typescript-boilerplate",
   "dependencies": {},
   "globalDependencies": {
-    "react": "registry:dt/react#0.14.0+20160630100702",
-    "react-native": "registry:dt/react-native#0.27.0+20160619030006"
+    "react": "registry:dt/react",
+    "react-native": "registry:dt/react-native"
   }
 }
