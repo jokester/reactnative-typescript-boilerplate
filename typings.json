@@ -3,6 +3,7 @@
   "dependencies": {},
   "globalDependencies": {
     "react": "registry:dt/react",
-    "react-native": "registry:dt/react-native"
+    "react-native": "registry:dt/react-native",
+    "redux": "registry:dt/redux#3.5.2+20160703092728"
   }
 }

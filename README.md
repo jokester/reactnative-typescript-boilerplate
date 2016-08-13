@@ -4,6 +4,7 @@
 
 - React `v15.2.1`
 - React Native `v0.31.0`
+- Redux `v3.5`
 
 ## Android
 
@@ -14,5 +15,5 @@
     - You can also import `android/` into Android Studio and run with it
 - `npm run android:release` to build signed apk `android/build/outputs/apk/android-release.apk` with offline minimized js bundle.
 
-## iOS(TODO)
+## iOS (TODO)
 
