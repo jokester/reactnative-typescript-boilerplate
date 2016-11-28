@@ -5,17 +5,24 @@ import {
     StyleSheet,
     Text,
     View,
+    ListView,
 } from 'react-native';
+import { Provider } from 'react-redux';
+
+import BookList from './ui/BookList';
+
+const store = getStore();
 
 class MyAwesomeApp extends React.Component<{}, {}> {
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.hello}>Hello, Woold</Text>
-            </View>
+            <Provider store={store}>
+                <BookList />
+            </Provider>
         )
     }
 }
+
 interface AppStyle {
     container: React.ViewStyle;
     hello: React.TextStyle;
@@ -32,12 +39,9 @@ var styles = StyleSheet.create<AppStyle>({
     },
 });
 
-AppRegistry.registerComponent('MyAwesomeApp', () => MyAwesomeApp);
-
 import {store} from './state';
 
 store.subscribe(() => console.log(store.getState()));
 
 store.dispatch({ type: 'RemoveBook' });
 store.dispatch({ type: 'RemoveBook' });
-

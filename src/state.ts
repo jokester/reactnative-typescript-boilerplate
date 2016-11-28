@@ -1,6 +1,6 @@
 /**
  * This file contains a few
- * 
+ *
  * You may want to read [Redux Basics](http://redux.js.org/docs/basics/index.html) first.
  */
 
@@ -18,7 +18,7 @@ namespace AppLogic {
     }
 
     /**
-     * State 
+     * State
      */
     export interface AppState {
         books: BookItem[];
@@ -67,7 +67,7 @@ namespace AppLogic {
     };
 
     /**
-     * A **Reducer** 
+     * A **Reducer**
      */
     export const reducer: Redux.Reducer<AppState> = function <A extends Action>(prevState = createInitState(), action: A) {
 

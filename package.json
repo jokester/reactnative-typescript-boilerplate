@@ -6,6 +6,10 @@
   "dependencies": {
     "react": "^15.4.1",
     "react-native": "^0.39.2",
+    "@types/react": "^0.14.51",
+    "@types/react-native": "^0.34.39",
+    "@types/react-redux": "^4.4.34",
+    "react-redux": "^4.4.6",
     "redux": "^3.6.0"
   },
   "devDependencies": {
@@ -16,11 +20,14 @@
     "typescript": "^2.1.4"
   },
   "scripts": {
-    "android:bundle": "tsc && node node_modules/react-native/local-cli/cli.js bundle --entry-file=src/js/index.android.js --platform=android --assets-dest=android/src/main/res --bundle-output=android/bundle.js && uglifyjs --screw-ie8 --mangle <android/bundle.js >android/src/main/assets/bundle.js && rm android/bundle.js",
+    "android:bundle": "tsc && react-native bundle --entry-file=app/index.android.js --platform=android --assets-dest=android/src/main/res --bundle-output=android/bundle.js",
+    "android:minify": "uglifyjs --screw-ie8 --mangle <android/bundle.js >android/src/main/assets/index.android.bundle.js",
     "android:debug": "rm -f android/src/main/assets/bundle.js && ./gradlew android:assembleDebug",
-    "android:release": "npm run android:bundle && ./gradlew android:aR",
-    "dev-server": "concurrently \"node node_modules/react-native/local-cli/cli.js start --projectRoots=src/js,node_modules\" \"tsc --watch\"",
-    "postinstall": "typings install"
+    "android:release": "npm run android:bundle && npm run android:minify && ./gradlew android:aR",
+    "dev-server": "concurrently --kill-others -p \"[{name}@{time}]\" -n \"react-native,tsc\" \"react-native start --root app\" \"tsc --watch\"",
+    "tsc": "tsc",
+    "tsc:watch": "tsc --watch",
+    "rn": "react-native start --root app"
   },
   "repository": {
     "type": "git",
@@ -28,11 +35,13 @@
   },
   "keywords": [
     "react",
-    "reacnative",
+    "react-native",
+    "redux",
+    "android",
     "typescript"
   ],
   "author": "Wang Guan <momocraft.com>",
-  "license": "CC-BY-SA-4.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jokester/reactnative-typescript-boilerplate/issues"
   },

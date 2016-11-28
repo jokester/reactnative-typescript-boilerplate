@@ -5,24 +5,15 @@
         "noImplicitAny": true,
         "experimentalDecorators": true,
         "preserveConstEnums": true,
-        "outDir": "src/js",
-        "rootDir": "src/ts",
-        "sourceMap": true,
         "moduleResolution": "node",
         "listEmittedFiles": true,
         "emitDecoratorMetadata": true,
         "pretty": true,
-        "module": "commonjs"
+        "module": "commonjs",
+        "outDir": "app",
+        "rootDir": "src",
+        "sourceMap": true
     },
-    "filesGlob": [
-        "typings/**/*.d.ts",
-        "src/ts/**/*.{ts,tsx}"
-    ],
-    "exclude": [
-        "typings/browser.d.ts",
-        "typings/browser",
-        "node_modules"
-    ],
     "compileOnSave": false,
     "atom": {
         "rewriteTsconfig": false
