@@ -82,4 +82,6 @@ namespace AppLogic {
     }
 }
 
+export type AppState = AppLogic.AppState;
+
 export const store = createStore(AppLogic.reducer);

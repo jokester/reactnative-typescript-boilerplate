@@ -11,7 +11,13 @@ import { Provider } from 'react-redux';
 
 import BookList from './ui/BookList';
 
-const store = getStore();
+import { store } from './state';
+
+store.subscribe(() => console.log(store.getState()));
+
+store.dispatch({ type: 'RemoveBook' });
+store.dispatch({ type: 'RemoveBook' });
+
 
 class MyAwesomeApp extends React.Component<{}, {}> {
     render() {
@@ -39,9 +45,4 @@ var styles = StyleSheet.create<AppStyle>({
     },
 });
 
-import {store} from './state';
-
-store.subscribe(() => console.log(store.getState()));
-
-store.dispatch({ type: 'RemoveBook' });
-store.dispatch({ type: 'RemoveBook' });
+AppRegistry.registerComponent('MyAwesomeApp', () => MyAwesomeApp);
