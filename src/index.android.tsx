@@ -26,6 +26,7 @@ class MyAwesomeApp extends React.Component<{}, {}> {
             </Provider>
         )
     }
+
 }
 
 interface AppStyle {
