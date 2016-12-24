@@ -9,15 +9,14 @@ import {
 } from 'react-native';
 import { Provider } from 'react-redux';
 
-import BookList from './ui/BookList';
+import { BookList } from './container/BookList';
 
 import { store } from './state';
 
 store.subscribe(() => console.log(store.getState()));
 
-store.dispatch({ type: 'RemoveBook' });
-store.dispatch({ type: 'RemoveBook' });
-
+// store.dispatch({ type: 'RemoveBook' });
+// store.dispatch({ type: 'RemoveBook' });
 
 class MyAwesomeApp extends React.Component<{}, {}> {
     render() {
@@ -33,6 +32,7 @@ interface AppStyle {
     container: React.ViewStyle;
     hello: React.TextStyle;
 }
+
 var styles = StyleSheet.create<AppStyle>({
     container: {
         flex: 1,
