@@ -4,6 +4,7 @@ import { View, Text, ListView } from 'react-native';
 
 import { BookItem } from '../model';
 import { AppState } from '../state';
+import { createAction } from '../action';
 
 import { BookList as _BookList, BookListProps } from '../component/BookList';
 
@@ -17,7 +18,7 @@ function mapStateToProps(state: AppState) {
 function mapDispatchToProps(dispatch: (action: any) => void) {
     return {
         removeBook(book: BookItem) {
-            console.log('removeBook', book);
+            dispatch(createAction.removeBook(book));
         },
         showDetail(book: BookItem) {
             console.log('showDetail', book);

@@ -8,6 +8,7 @@ import { Action, createStore } from 'redux';
 import * as Redux from 'redux';
 
 import { BookItem } from './model';
+import { Actions, ActionType } from './action';
 
 export interface AppState {
     books: BookItem[];
@@ -58,11 +59,11 @@ export interface Action {
 /**
  * A **Reducer**
  */
-export const reducer: Redux.Reducer<AppState> = function <A extends Action>(prevState = createInitState(), action: A) {
+export const reducer: Redux.Reducer<AppState> = function <A extends Actions.MergedAction>(prevState = createInitState(), action: A) {
 
-    if (action.type === 'RemoveBook') {
+    if (action.type === ActionType.RemoveBook) {
         return Object.assign({}, {
-            books: prevState.books.slice(1)
+            books: prevState.books.filter(b => b.title !== action.book.title)
         });
     }
 
