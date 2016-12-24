@@ -4,3 +4,8 @@
 /node_modules/
 /npm-debug.log
 /typings
+/build.gradle
+/local.properties
+*.iml
+/.idea
+/.vscode

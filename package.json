@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "react": "15.2.1",
-    "react-native": "0.31.0"
+    "react-native": "0.31.0",
+    "redux": "^3.5.2"
   },
   "devDependencies": {
     "concurrently": "^2.1.0",
