@@ -17,7 +17,7 @@ function mapStateToProps(state: AppState): PropsFromState {
 
 class BookList extends React.Component<PropsFromState, {}> {
     render() {
-        return <Text>{this.props.books.length}items</Text>;
+        return <Text>{this.props.books.length}items!!!!</Text>;
     }
 }
 
