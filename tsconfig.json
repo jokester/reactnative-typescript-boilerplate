@@ -7,7 +7,12 @@
         "preserveConstEnums": true,
         "outDir": "src/js",
         "rootDir": "src/ts",
-        "sourceMap": true
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "listEmittedFiles": true,
+        "emitDecoratorMetadata": true,
+        "pretty": true,
+        "module": "commonjs"
     },
     "filesGlob": [
         "typings/**/*.d.ts",

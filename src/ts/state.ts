@@ -4,7 +4,8 @@
  * You may want to read [Redux Basics](http://redux.js.org/docs/basics/index.html) first.
  */
 
-import {Action, createStore} from 'redux';
+import { Action, createStore } from 'redux';
+import * as Redux from 'redux';
 
 /**
  * We are implementing a book manager app.
